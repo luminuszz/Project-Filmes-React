@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-
+import './index.css';
+import {Link} from 'react-router-dom';
 
 class Header extends Component{
   constructor(props){
@@ -8,8 +9,8 @@ class Header extends Component{
 
   render(){
     return(
-      <div>
-        <h1>Teste header</h1>
+      <div className='header'>
+       <Link to='/'>Locadora Pica das Galáxias</Link>
       </div>
     )
   }

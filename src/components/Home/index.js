@@ -9,7 +9,7 @@ class Home extends Component{
   render(){
     return(
       <div>
-        <h1>Teste Filmes</h1>
+        <h5>Pagina Home</h5>
       </div>
     )
   }
