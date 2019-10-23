@@ -1,0 +1,40 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container article{
+  margin: 15px;
+  width: 100%;
+  background-color: #eee;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+ 
+
+
+}
+
+.container article img {
+  
+  max-width: 700px;
+  max-height: 350px;
+  border-radius: 5px;
+}
+
+.container article h1{
+  text-align: center;
+}
+.ListaFilmes p{
+
+  text-align: center;
+  align-items: center;
+
+ 
+}
