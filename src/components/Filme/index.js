@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import axios from 'axios';
 import './index.css'
+import api from '../../services/api';
 class Filme extends Component {
   constructor(props) {
     super(props);
@@ -14,15 +16,26 @@ class Filme extends Component {
   }
 
   carregaFilme() {
+
     const { id } = this.props.match.params;
     let url = `https://sujeitoprogramador.com/r-api/?api=filmes/${id}`;
-    fetch(url)
-      .then(r => r.json())
-      .then(json => {
-        this.setState({ filme: json });
-        console.log(json);
-      });
+
+    axios.get(url).then(res =>{
+    const arrayData = res.data;
+    console.log(arrayData);
+
+    this.setState({filme:arrayData});
+
+
+
+    })
+    
+    
+    
+    
+    
   }
+  
 
   render() {
     let state = this.state.filme;

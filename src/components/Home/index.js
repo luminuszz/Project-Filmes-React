@@ -1,6 +1,7 @@
-import React,{Component} from 'react';
-import {Link} from 'react-router-dom';
-import './index.css'
+import axios from 'axios';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import './index.css';
 
 class Home extends Component{
   constructor(props){
@@ -19,24 +20,17 @@ class Home extends Component{
   }
   // Load filmes
 
-  loadFilmes(){
+  async loadFilmes(){
     let url = 'https://sujeitoprogramador.com/r-api/?api=filmes'
-    fetch(url)
-    .then((response) =>response.json())
-    .then((json)=>{   
-      this.setState({filmes:json});
+    
+    await axios.get(url).then(res=>{
+      const arrayData = res.data
 
-      console.log(json)
+      this.setState({filmes:arrayData});
 
-      
-
-    });
-
-
+    })
 
     
-
-
 
   }
 
